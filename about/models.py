@@ -13,6 +13,11 @@ class Job(models.Model):
         return self.company
 
 
+class JobDetail(models.Model):
+    job = models.ForeignKey(Job, on_delete=models.CASCADE)
+    text = models.TextField('Detail text')
+
+
 class School(models.Model):
     school_name = models.CharField('school name', max_length=255)
     degree = models.CharField(max_length=255)

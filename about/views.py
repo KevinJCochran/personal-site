@@ -8,7 +8,7 @@ from about.models import Job
 
 
 def index(request):
-    jobs = Job.objects.all().get().company
+    jobs = Job.objects.all()
     context = {
         'jobs': jobs
     }
